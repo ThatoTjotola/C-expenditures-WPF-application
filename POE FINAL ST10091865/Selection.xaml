@@ -1,0 +1,71 @@
+﻿<Window x:Class="POE_FINAL_ST10091865.Selection"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_FINAL_ST10091865"
+        mc:Ignorable="d"
+       Title="Selection" Height="450" Width="800"
+        
+        WindowStyle="None"
+        ResizeMode = "CanResize"
+        Background="Transparent"
+        AllowsTransparency="True" >
+    <Border Background="LightSlateGray"
+            CornerRadius="50" RenderTransformOrigin="0.5,0.5" >
+
+        <Border.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.094"/>
+                <TranslateTransform/>
+            </TransformGroup>
+
+        </Border.RenderTransform>
+
+        <StackPanel Margin="0,0,85,90">
+
+
+            <StackPanel Orientation="Horizontal"/>
+
+            <TextBlock
+                      Foreground = "Black"
+                      FontWeight="ExtraBold"
+                      FontSize = "40"
+                      HorizontalAlignment="Center"
+                      >
+                
+                <Run Language="en-za" Text="SELECTION"/></TextBlock>
+            <Grid Height="312" Width="580">
+
+                <Label Content="Select from list:"
+                FontSize="22"
+                Foreground="White" 
+                Width="191" 
+                HorizontalAlignment="Left"
+               Margin="4,59,0,150"
+               />
+                <ListBox x:Name="Options" Margin="274,54,16,79" Background="LightSlateGray" >
+                    <ListBoxItem x:Name="Renting" Height="32" Content="Renting Accomodation" Foreground="White" FontSize="18" Selected="Renting_Selected"/>
+                    <ListBoxItem x:Name="Buying" Content="Buy Property" Height="45" FontSize="18" Foreground="White" Selected="Buying_Selected"/>
+                    <ListBoxItem x:Name="PurchaseVechile" Content="Purchase Vechile" Height="41" FontSize="18" Foreground="White" Selected="PurchaseVechile_Selected"/>
+                    <ListBoxItem x:Name="Savings" Content="Savings F1 Kyalami" Height="58" FontSize="18" Foreground="White" Selected="Savings_Selected"/>
+                </ListBox>
+
+
+
+
+
+                <Button x:Name="Exit3"
+                        Content="Exit"
+                        FontSize="22"
+                        Background="Red" 
+                        Click="ExitButton_Click" Margin="405,244,11,6"
+                        />
+
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

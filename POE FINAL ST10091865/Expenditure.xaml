@@ -1,0 +1,85 @@
+﻿<Window x:Class="POE_FINAL_ST10091865.Expenditure"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_FINAL_ST10091865"
+        mc:Ignorable="d"
+        Title="Expenditure" Height="700" Width="1000"
+        
+        WindowStyle="None"
+        ResizeMode = "CanResizeWithGrip"
+        Background="Transparent"
+        AllowsTransparency="True" >
+    <Border Background="DarkGray"
+            CornerRadius="50" RenderTransformOrigin="0.5,0.5" Margin="0,0,-320,-215" >
+        <Border.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.094"/>
+                <TranslateTransform/>
+            </TransformGroup>
+
+        </Border.RenderTransform>
+        <StackPanel Margin="0,0,-14,4">
+
+
+            <StackPanel Orientation="Horizontal"/>
+
+            <TextBlock
+                      Foreground = "Black"
+                      FontWeight="ExtraBold"
+                      FontSize = "40"
+                      HorizontalAlignment="Center"
+                      >
+                
+                <Run Language="en-za" Text="Monthly Expenditure"/></TextBlock>
+            <Grid Height="407" Width="742">
+                <Label Content="Amount spent on groceries:" 
+                       Margin="34,32,474,338"
+                       FontSize="18"
+                       Foreground="WhiteSmoke"/>
+                <TextBox x:Name="groceries" Margin="422,24,34,346" Background="White" 
+                        TextChanged="groceries_TextChanged"   />
+
+                <Label Content="Amount spent on utilities (water and lights):" Margin="24,122,369,253"
+                       FontSize="18"
+                       Foreground="WhiteSmoke"/>
+                <TextBox x:Name="Utilities" 
+                           Margin="419,117,28,253"
+                           Background="WhiteSmoke" TextChanged="Utilities_TextChanged"/>
+                <Label Content="Amount spent on travel including petrol:"
+                       FontSize="18" Margin="17,217,385,158" 
+                       Foreground="WhiteSmoke"/>
+                <TextBox x:Name="TravelCosts"
+                           Background="WhiteSmoke" Margin="414,217,26,147" TextChanged="TravelCosts_TextChanged"/>
+                <Label Content="Amount spent on communication:" 
+                       FontSize="18" 
+                       Margin="25,312,423,65" 
+                       Foreground="WhiteSmoke"/>
+                <TextBox x:Name="Communication"
+                           Background="WhiteSmoke"
+                           Margin="410,317,26,48" TextChanged="Communication_TextChanged"/>
+                <Label Content="Amount spent on other:"
+                       FontSize="18" 
+                       Foreground="White" Margin="44,404,395,-32"/>
+                <TextBox x:Name="Other"
+                        Margin="406,416,19,-44"
+                        Background="WhiteSmoke" TextChanged="Other_TextChanged"/>
+                <Button x:Name="Save1"
+                    Content="Save" 
+                    FontSize="22"
+                    Margin="183,481,417,-137"
+                    Background="Yellow" Click="Save1_Click"/>
+                <Button x:Name="Exit1"
+                    Content="Exit" 
+                    FontSize="22"
+                    Margin="410,482,205,-135"
+                    
+                    Background="Red" 
+                        Click="Exit1_Click"/>
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>

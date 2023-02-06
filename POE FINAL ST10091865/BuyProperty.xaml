@@ -1,0 +1,114 @@
+﻿<Window x:Class="POE_FINAL_ST10091865.BuyProperty"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:POE_FINAL_ST10091865"
+        mc:Ignorable="d"
+        Title="BuyProperty" Height="730" Width="1010"
+        
+        
+        WindowStyle="None"
+        ResizeMode = "CanResize"
+        Background="Transparent"
+        AllowsTransparency="True" >
+    <Border Background="LightSlateGray"
+            CornerRadius="50" RenderTransformOrigin="0.5,0.5" >
+
+        <Border.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.094"/>
+                <TranslateTransform/>
+            </TransformGroup>
+
+        </Border.RenderTransform>
+
+        <StackPanel Margin="0,0,41,23">
+
+
+            <StackPanel Orientation="Horizontal"/>
+
+            <TextBlock
+                      Foreground = "Black"
+                      FontWeight="ExtraBold"
+                      FontSize = "40"
+                      HorizontalAlignment="Center"
+                      >
+                
+                <Run Language="en-za" Text="Purchase Property "/></TextBlock>
+            <Grid Height="325" Width="565">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="327*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+                <Label Content="Purchase Price:"
+                FontSize="22"
+                Foreground="White" 
+                Width="191" 
+                HorizontalAlignment="Left"
+               Margin="4,59,0,149"
+               />
+
+                <TextBox x:Name ="PurchasePrice" TextWrapping="WrapWithOverflow" RenderTransformOrigin="0.531,-0.794" Margin="262,62,43,212" TextChanged="PurchasePrice_TextChanged"/>
+                <Label Content="Total Deposit :"
+                 FontSize="22"
+                 Foreground="White" 
+                 Width="240" 
+                 HorizontalAlignment="Left"
+                 Margin="-8,149,0,98"/>
+
+                <TextBox x:Name ="Deposit"
+                     TextWrapping="WrapWithOverflow"
+                     Margin="261,158,46,117" TextChanged="Deposit_TextChanged" />
+                <Label Content="Interest Rate % :"
+                 FontSize="22"
+                 Foreground="White" 
+                 Width="240" 
+                 HorizontalAlignment="Left"
+                 Margin="-4,248,0,0" Grid.RowSpan="2"/>
+                <TextBox x:Name ="Interest"
+                     TextWrapping="WrapWithOverflow"
+                     Margin="261,250,46,25" TextChanged="Interest_TextChanged" />
+                <Label Content="Months to Repay  :"
+                 FontSize="22"
+                 Foreground="White" 
+                 Width="240" 
+                 HorizontalAlignment="Left"
+                 Margin="-12,37,0,-113" Grid.Row="1" RenderTransformOrigin="0.5,0.5">
+                    <Label.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform AngleY="-0.346"/>
+                            <RotateTransform/>
+                            <TranslateTransform Y="-0.725"/>
+                        </TransformGroup>
+                    </Label.RenderTransform>
+                </Label>
+                <TextBox x:Name ="Months"
+                     TextWrapping="WrapWithOverflow"
+                     Margin="261,28,46,-76" TextChanged="Months_TextChanged" Grid.Row="1" />
+                <Button x:Name="CalculateH"
+                    Content="Calculate" 
+                    FontSize="22"
+                    Margin="161,142,264,-217"
+                    Background="Yellow" Click="SaveButton_Click" Grid.Row="1"
+                    
+                    />
+                <Button x:Name="Selection2"
+                        Content="Selection"
+                        FontSize="22"
+                        Background="Red" 
+                        Click="ExitButton_Click" Margin="396,137,20,-214" Grid.Row="1"
+                        />
+
+
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
+
+        
+    
